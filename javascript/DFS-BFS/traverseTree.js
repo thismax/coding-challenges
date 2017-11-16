@@ -33,7 +33,22 @@ output => [1,2,4,3,5]
 
 
 var traverseTree = function(t) {
-// your code here  
+  const queue = [];
+  const results = [];
+  let currentNode = t;
+             
+  while (currentNode) {
+    if (currentNode.left) {
+      queue.push(currentNode.left);
+    }
+    if (currentNode.right) {
+      queue.push(currentNode.right);
+    }
+    results.push(currentNode.value);
+    currentNode = queue.shift();
+  }
+  
+  return results; 
 };
 
 
