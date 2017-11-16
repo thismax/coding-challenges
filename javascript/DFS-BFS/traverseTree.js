@@ -17,12 +17,11 @@
 // 
 // 
 var traverseTree = function(t) {
-
-  let queue = [];
   
 };
 
 
+// tests
 t = {
   'value': 1,
   'left': {
@@ -44,3 +43,7 @@ t = {
     'right': null
   }
 };
+
+it('should perform a BFS', function() {
+  assert.deepEqual(traverseTree(t), [1, 2, 4, 3, 5]);
+});
