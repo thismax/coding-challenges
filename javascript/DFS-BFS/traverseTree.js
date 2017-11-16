@@ -1,3 +1,5 @@
+const chai = require('chai');
+const assert = chai.assert;
 // Definition for binary tree:
 // function Tree(x) {
 //   this.value = x;
@@ -19,7 +21,6 @@
 var traverseTree = function(t) {
   
 };
-
 
 // tests
 t = {
