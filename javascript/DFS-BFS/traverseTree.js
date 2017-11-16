@@ -16,6 +16,31 @@
 // output => [1,2,4,3,5]
 // 
 // 
-function traverseTree(t) {
+var traverseTree = function(t) {
+
+  let queue = [];
   
-}
+};
+
+
+t = {
+  'value': 1,
+  'left': {
+    'value': 2,
+    'left': null,
+    'right': {
+      'value': 3,
+      'left': null,
+      'right': null
+    }
+  },
+  'right': {
+    'value': 4,
+    'left': {
+      'value': 5,
+      'left': null,
+      'right': null
+    },
+    'right': null
+  }
+};
