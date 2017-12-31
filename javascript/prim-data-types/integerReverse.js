@@ -16,5 +16,10 @@ Only use integers and math in your solution.
 
 
 reverseInteger (n) => {
-// your code here
+  var result = 0;
+  while (Math.floor(n)) {
+    result = result*10 + n%10;
+    n = Math.floor(n/10);
+  }
+  return result
 }
