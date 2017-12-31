@@ -23,9 +23,6 @@ class Deck {
       cards[n] = cards[i];
       cards[i] = t;
     }
-    console.log(cards);
     return cards;
   }
 }
-
-let deck = new Deck();
