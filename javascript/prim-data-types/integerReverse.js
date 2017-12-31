@@ -1,3 +1,6 @@
+const chai = require('chai');
+const assert = chai.assert;
+
 /*                                      
                        _   _             
                       | | (_)            
@@ -14,12 +17,25 @@ Only use integers and math in your solution.
 
 */
 
-
-reverseInteger (n) => {
+const reverseInteger = n => {
   var result = 0;
   while (Math.floor(n)) {
-    result = result*10 + n%10;
-    n = Math.floor(n/10);
+    result = result * 10 + n % 10;
+    n = Math.floor(n / 10);
   }
-  return result
-}
+  return result;
+};
+
+/*
+ _            _   
+| |          | |  
+| |_ ___  ___| |_ 
+| __/ _ \/ __| __|
+| ||  __/\__ \ |_ 
+ \__\___||___/\__|
+                  
+*/
+
+it('should reverse integers', function() {
+  assert.equal(1234, reverseInteger(4321));
+});
