@@ -12,3 +12,27 @@ class Card {
     }
   }
 }
+
+class Deck {
+  constructor() {
+    this.values = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+    this.suits = ['s', 'd', 'c', 'h'];
+    this.deck = this.populate()[0];
+    this.stringifiedDeck = this.populate()[1];
+  }
+
+  populate() {
+    const deck = [];
+    const stringifiedDeck = [];
+    for (let i = 0; i < this.suits.length; i++) {
+      for (let j = 0; j < this.values.length; j++) {
+        let card = new Card(this.values[j], this.suits[i]);
+        stringifiedDeck.push(card.card);
+        deck.push(card);
+      }
+    }
+    return [deck, stringifiedDeck];
+  }
+
+  shuffle() {}
+}
