@@ -34,5 +34,16 @@ class Deck {
     return [deck, stringifiedDeck];
   }
 
-  shuffle() {}
+  shuffle() {
+    let n = this.deck.length,
+      i,
+      t;
+    while (n) {
+      i = Math.floor(Math.random() * n--);
+      t = this.deck[n];
+      this.deck[n] = this.deck[i];
+      this.deck[i] = t;
+    }
+    return this.deck;
+  }
 }
