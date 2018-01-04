@@ -47,3 +47,13 @@ class Deck {
     return this.deck;
   }
 }
+
+class Player {
+  constructor() {
+    this.hand = [];
+    this.stringifiedHand = [];
+    this.total = 0;
+    this.bust = false;
+    this.blackjack = false;
+  }
+}
